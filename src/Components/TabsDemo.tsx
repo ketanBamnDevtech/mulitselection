@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react'
+import React, { Fragment, useState } from 'react'
 import * as TSC from 'Components/TabsStyledComponent'
 import MultiSelectDemo from 'Shared/MultiSelectDemo';
 import { options } from 'Utils'
@@ -14,7 +14,7 @@ const TabsDemo = () => {
 	const onSelect = (option: MulitSelectFilter) => {
 		if (option) setSelectedFilter(current => [...current, option])
 	}
-
+ 
 	const onRemove = (option: MulitSelectFilter) => {
 		const index = selectedFilters.indexOf(option);
 		if (index > -1) {
@@ -22,6 +22,7 @@ const TabsDemo = () => {
 		}
 		setSelectedFilter(selectedFilters => [...selectedFilters])
 	}
+	
 	return (
 		<Fragment>
 			<TSC.TabsDemoContainer>
