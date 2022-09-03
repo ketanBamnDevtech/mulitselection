@@ -47,7 +47,7 @@ const Tabs: React.FC = () => {
 				<div><strong>Tab Name:</strong> {data?.tabName}</div>
 				<strong>Filters Selected:</strong>
 				<Fragment>
-					{data?.filters.map((filter: MulitSelectFilter) => <p>{filter.label}</p>)}
+					{data?.filters.map((filter: MulitSelectFilter) => <p key={filter.value}>{filter.label}</p>)}
 				</Fragment>
 			</div>
 		</Fragment>
